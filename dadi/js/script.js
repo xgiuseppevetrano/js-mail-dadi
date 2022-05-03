@@ -7,4 +7,10 @@ const pcNumber = Math.floor(Math.random() * 6) + 1;
 console.log(pcNumber);
 
 // 2. Stabilisco il vincitore in base a chi fa il punteggio più alto
-
+if (userNumber > pcNumber) {
+    console.log("Hai vinto!");
+} else if (userNumber < pcNumber) {
+    console.log("Hai perso!");
+} else {
+    console.log("Hai pareggiato!");
+}
