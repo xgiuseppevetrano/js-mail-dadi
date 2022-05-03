@@ -13,10 +13,17 @@ for (let i = 0; i < usersMail.length; i++) {
 }
 
 // 3. Stampo un messaggio appropriato sull’esito del controllo
+const box = document.querySelector(".box");
+const message = document.createElement("h1");
+
 if (isValidMail) {
     console.log("Mail valida, puoi accedere!");
-    alert("Puoi accedere!");
+    message.innerText = "Puoi accedere!";
+    box.classList.add("box-access");
 } else {
     console.log("Mail non valida, non puoi accedere!");
-    alert("Non puoi accedere!");
+    message.innerText = "Non puoi accedere!";
+    box.classList.add("box-noaccess");
 }
+
+box.append(message);
